@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="package" author="true" classpath="C:\Users\PlasticMan\.p2\pool\plugins\org.junit.jupiter.migrationsupport_5.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.platform.commons_1.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.vintage.engine_4.12.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.hamcrest.core_1.3.0.v201303031735.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.platform.suite.api_1.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.jupiter.api_5.0.0.v20170910-2246.jar;lib/JavaAPIforKml-2.2.0.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.platform.engine_1.0.0.v20170910-2246.jar;lib/hamcrest-core-1.3.jar;lib/jaxb-impl-2.2.6.jar;lib/mysql-connector-java-5.1.45/mysql-connector-java-5.1.45-bin.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.jupiter.engine_5.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.jupiter.params_5.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.platform.runner_1.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.apiguardian_1.0.0.v20170910-2246.jar;lib/javacsv-2.0.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.junit.platform.launcher_1.0.0.v20170910-2246.jar;C:\Users\PlasticMan\.p2\pool\plugins\org.opentest4j_1.0.0.v20170910-2246.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="test.Ex1,test.Ex2,test.Ex3,Ex3,test.Ex4,Ex2,Ex4,Ex1" source="1.8" sourcepath="src" splitindex="true" use="true" version="true">
+            <link href="http://hamcrest.org/JavaHamcrest/javadoc/1.3/"/>
+            <link href="http://ota4j-team.github.io/opentest4j/docs/current/api/"/>
+            <link href="https://docs.oracle.com/javase/8/docs/api/"/>
+            <link href="https://apiguardian-team.github.io/apiguardian/docs/current/api/"/>
+            <link href="http://junit.org/junit5/docs/current/api/"/>
+            <link href="http://junit.org/junit4/javadoc/latest/"/>
+            <link href="http://docs.oracle.com/javase/8/javafx/api/"/>
+        </javadoc>
+    </target>
+</project>
