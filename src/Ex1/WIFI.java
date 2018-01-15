@@ -1,7 +1,7 @@
 package Ex1;
 /**
  * class of WiFi network
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class WIFI 

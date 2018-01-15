@@ -1,7 +1,7 @@
 package Ex1;
 /**
  * class of WiFi network
- * @author Alexey Titov &   Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 import java.util.*;

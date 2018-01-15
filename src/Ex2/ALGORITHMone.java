@@ -1,7 +1,7 @@
 package Ex2;
 /**
  * class for first algorithm
- * @author Alexey Titov &   Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 2.0
  */
 //libraries

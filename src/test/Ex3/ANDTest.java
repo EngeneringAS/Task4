@@ -5,10 +5,8 @@
  */
 package test.Ex3;
 //libraries
-import Ex1.DataWIFI;
-import Ex3.AND;
-import Ex3.DeviceFilter;
-import Ex3.TimeFilter;
+import Ex1.*;
+import Ex3.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 /**

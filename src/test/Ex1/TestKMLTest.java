@@ -4,14 +4,10 @@
  * and open the template in the editor.
  */
 package test.Ex1;
-//libraries
+import Ex1.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import org.junit.Test;
-import Ex1.DataWIFI;
-import Ex1.TestKML;
-import Ex1.WIFI;
-
 import static org.junit.Assert.*;
 
 /**

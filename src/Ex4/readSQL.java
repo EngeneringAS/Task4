@@ -38,16 +38,12 @@ public class readSQL {
     {
         ArrayList<DataWIFI> dwf_list=new ArrayList<>();
         try{
-//            _ip="5.29.193.52";
-//            _url = "jdbc:mysql://"+_ip+":3306/oop_course_ariel";
-//            _user = "oop1";
-//            _password = "Lambda1();";
             _ip=args[0];
             _url="jdbc:mysql://"+_ip+":"+args[1]+"/"+args[4];
             _user=args[2];
             _password=args[3];
             _con = null;
-            dwf_list=test_ex4_db();
+            dwf_list=test_ex4_db(args);
         }catch(Exception e){
             return null;
         }
@@ -55,9 +51,11 @@ public class readSQL {
     }
     /**
      * the function connet to sql database and read data
+     * @param args IP,port, user, password,database,table
      * @return data from data base
      */
-    public static ArrayList<DataWIFI> test_ex4_db() 
+    @SuppressWarnings("resource")
+	public static ArrayList<DataWIFI> test_ex4_db(String[] args)
     {
         //variables
         Statement st = null;
@@ -67,8 +65,13 @@ public class readSQL {
             //connect to SQL database
             _con = DriverManager.getConnection(_url, _user, _password);
             st = _con.createStatement();
+            rs = st.executeQuery("SELECT VERSION()");
+            //print version
+            if (rs.next()){
+                System.out.println(rs.getString(1));
+            }
             //command select all columns
-            PreparedStatement pst = _con.prepareStatement("SELECT * FROM ex4_db");
+            PreparedStatement pst = _con.prepareStatement("SELECT * FROM "+args[5]);
             rs = pst.executeQuery();
             //read data 
             while (rs.next()) 
@@ -116,7 +119,8 @@ public class readSQL {
      * @param args  IP,port,user,password,database,table
      * @return time of last modification
      */
-    public static String TimeUPDATE(String[] args)
+    @SuppressWarnings("resource")
+	public static String TimeUPDATE(String[] args)
     {
         //variables
         Statement st = null;
@@ -134,10 +138,15 @@ public class readSQL {
         try {     
             _con = DriverManager.getConnection(_url, _user, _password);
             st = _con.createStatement();
+            rs = st.executeQuery("SELECT VERSION()");
+            //print version
+            if (rs.next()) {
+                System.out.println(rs.getString(1));
+            }
             PreparedStatement pst = _con.prepareStatement("SELECT UPDATE_TIME\n" +
                                                           "FROM   INFORMATION_SCHEMA.TABLES\n" +
-                                                          "WHERE  TABLE_SCHEMA = 'oop_course_ariel'\n" +
-                                                          "AND    TABLE_NAME = 'ex4_db'");
+                                                          "WHERE  TABLE_SCHEMA = '"+args[4]+"'\n" +
+                                                          "AND    TABLE_NAME = '"+args[5]+"'");
             rs = pst.executeQuery();
             if (rs.next()) {
                 answer=rs.getString(1);

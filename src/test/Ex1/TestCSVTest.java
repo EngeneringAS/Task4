@@ -6,14 +6,13 @@
 package test.Ex1;
 //libraries
 import java.util.ArrayList;
+import Ex1.*;
 import org.junit.Test;
-import Ex1.DataWIFI;
-import Ex1.TestCSV;
 import static org.junit.Assert.*;
 
 /**
  * Test class for TestCSV
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class TestCSVTest {

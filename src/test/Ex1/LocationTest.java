@@ -6,12 +6,12 @@
 package test.Ex1;
 //libraries
 import org.junit.Test;
-import Ex1.Location;
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**
  * Test class for location
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class LocationTest {

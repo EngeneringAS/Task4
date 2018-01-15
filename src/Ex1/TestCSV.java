@@ -1,7 +1,7 @@
 package Ex1;
 /**
  * main for question 2
- * @author Alexey Titov &   Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 //libraries

@@ -1,8 +1,7 @@
 package Ex2;
 /**
  * class for algorithm 1, contains data for one MAC
- * @author Alexey Titov &   Shalom Weinberger
- * ID:     334063021    &   203179403
+ * @author Alexey Titov and Shalom Weinberger
  * @version 2.0
  */
 //libraries

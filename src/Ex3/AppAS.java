@@ -1380,7 +1380,7 @@ public class AppAS extends JFrame {
         InitializationSQLPanel();
     }//GEN-LAST:event_jPanelSQLAncestorAdded
     //user select connect to SQL database
-    private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {
+    private void jButtonConnectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConnectActionPerformed
         String all=jFormattedTextFieldIP.getText()+","+jFormattedTextFieldPORT.getText()+","+jTextFieldUSER.getText()+
                    ","+jTextFieldPASSWORD.getText()+","+jTextFieldDB.getText()+","+jTextFieldTable.getText();
         String[] args=all.split(",");

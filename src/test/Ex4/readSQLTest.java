@@ -5,8 +5,8 @@
  */
 package test.Ex4;
 //libraries
-import Ex1.DataWIFI;
-import Ex4.readSQL;
+import Ex1.*;
+import Ex4.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -32,7 +32,7 @@ public class readSQLTest {
      */
     @Test
     public void testTest_ex4_db() {
-        ArrayList<DataWIFI> result = readSQL.test_ex4_db();
+        ArrayList<DataWIFI> result = readSQL.test_ex4_db(null);
         System.out.println(result.toString());
         assertEquals(new ArrayList<>(), result);
     }

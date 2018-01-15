@@ -5,14 +5,14 @@
  */
 package test.Ex1;
 //libraries
+import Ex1.*;
 import org.junit.After;
 import org.junit.Test;
-import Ex1.Time;
 import static org.junit.Assert.*;
 
 /**
  * Test class for Time
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class TimeTest {

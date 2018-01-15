@@ -5,9 +5,8 @@
  */
 package test.Ex3;
 //libraries
-import Ex1.DataWIFI;
-import Ex1.Location;
-import Ex3.HelpFunctionEx3;
+import Ex1.*;
+import Ex3.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;

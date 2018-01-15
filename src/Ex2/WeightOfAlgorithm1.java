@@ -1,7 +1,7 @@
 package Ex2;
 /**
  * class calculates coordinates according to the first algorithm
- * @author Alexey Titov &   Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 2.0
  */
 import java.util.HashMap;

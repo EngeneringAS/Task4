@@ -5,14 +5,14 @@
  */
 package test.Ex2;
 //libraries
-import Ex1.Location;
-import Ex2.ClassOfAlgorithm1;
+import Ex1.*;
+import Ex2.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  * test for ClassOfAlgorithm1 class
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 1.0
  */
 public class ClassOfAlgorithm1Test {

@@ -1,7 +1,7 @@
 package Ex2;
 /**
  * class for algorithm 2, was created to assist in the calculations
- * @author Alexey Titov &   Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 2.0
  */
 import Ex1.Location;

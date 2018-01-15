@@ -5,9 +5,8 @@
  */
 package test.Ex2;
 //libraries
-import Ex1.Location;
-import Ex1.WIFI;
-import Ex2.ALGOtwoCLASS;
+import Ex1.*;
+import Ex2.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;

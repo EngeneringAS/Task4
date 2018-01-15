@@ -5,19 +5,15 @@
  */
 package test.Ex2;
 //libraries
-import Ex1.DataWIFI;
-import Ex1.Location;
-import Ex1.WIFI;
-import Ex2.ALGOtwoCLASS;
-import Ex2.ClassOfAlgorithm1;
-import Ex2.HelpFunctions;
+import Ex1.*;
+import Ex2.*;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  * test for HelpFunctions class
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 2.0
  */
 public class HelpFunctionsTest {

@@ -8,12 +8,12 @@ package test.Ex1;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import Ex1.WIFI;
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**
  * Test class for WIFI
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class WIFITest {

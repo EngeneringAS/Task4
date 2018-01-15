@@ -14,15 +14,14 @@ import static org.junit.Assert.*;
 
 /**
  * Test class for interface CompareDataWifi
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 11.2
  */
 public class CompareDataWifiTest {
-    //variable
-	private CompareDataWifi cdw;
+    private CompareDataWifi cdw;
     @After
     public void tearDown() throws Exception {
-    	cdw=null;
+	cdw=null;
     }
     @Test
     public void testCompareDataWIFIDataWIFI() {

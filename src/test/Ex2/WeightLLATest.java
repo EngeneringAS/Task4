@@ -5,13 +5,13 @@
  */
 package test.Ex2;
 //libraries
+import Ex2.*;
 import org.junit.Test;
-import Ex2.WeightLLA;
 import static org.junit.Assert.*;
 
 /**
  * test for WeightLLA class
- * @author Alexey Titov and  Shalom Weinberger
+ * @author Alexey Titov and Shalom Weinberger
  * @version 1.0
  */
 public class WeightLLATest {
