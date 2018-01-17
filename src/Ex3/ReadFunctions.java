@@ -98,7 +98,7 @@ public class ReadFunctions{
             row.readHeaders();
             if (row.getHeaderCount()!=46)		//check that there are 46 headers
             {
-                JOptionPane.showMessageDialog(null, "File is not correct");
+                JOptionPane.showMessageDialog(null, "File is not correct(46)");
                 row.close();
                 return null;
             }
@@ -149,10 +149,10 @@ public class ReadFunctions{
         }
         row.close();
         }catch(FileNotFoundException e){
-            JOptionPane.showMessageDialog(null, "kml record not saved\nincorrect file");
+            JOptionPane.showMessageDialog(null, "incorrect file");
             return dwf;
         }catch(IOException e){
-            JOptionPane.showMessageDialog(null, "kml record not saved\nincorrect file");
+            JOptionPane.showMessageDialog(null, "incorrect file");
             return dwf;
         }catch(IllegalArgumentException e){
             JOptionPane.showMessageDialog(null, "Why null????");
@@ -370,7 +370,6 @@ public class ReadFunctions{
                     continue;
                 DataWIFI tmpWIFI=new DataWIFI();
                 Location place=new Location();
-                int cnt=0;				//variables for check MAC,Signal
                 int cnt2=0;				//variables for check latitude,longitude
                 int max=0;				//number of networks in the list		
                 boolean flagtime;			//flag for check time
@@ -392,16 +391,12 @@ public class ReadFunctions{
                 tmpWIFI.setID(row.get(1));
                 dwf.add(tmpWIFI);
                 //read WiFi data
-                for (int i=0;i<max;cnt=0,i++)
+                for (int i=0;i<max;i++)
                 {
                     WIFI tmpWF=new WIFI();
                     try {
-                        cnt+=tmpWF.setMAC(row.get(7+i*4));
-                        tmpWF.setSSID(row.get(6+i*4));
-                        cnt+=tmpWF.setSignal(Integer.parseInt(row.get(9+i*4)));
-                        cnt+=tmpWF.setFrequency(Integer.parseInt(row.get(8+i*4)));
-                        if (cnt!=3)
-                            continue;
+                    	tmpWF.setMAC(row.get(7+i*4));
+                    	tmpWF.setSignal(Integer.parseInt(row.get(9+i*4)));
                         dwf.get(j).setWiFi(tmpWF);
                         setMAX(tmpWF);
                     }catch(NumberFormatException e){

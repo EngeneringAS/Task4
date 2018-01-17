@@ -1520,7 +1520,6 @@ public class AppAS extends JFrame {
                 {
                     File file = new File(pair.getKey());
                     //file deleted
-                    System.out.println(file.exists());
                     if (!file.exists())
                         TableFiles.remove(pair.getKey(), pair.getValue());
                     else                                    //file is modificate
@@ -1574,12 +1573,15 @@ public class AppAS extends JFrame {
             {
                 TableSQL.entrySet().forEach((pair) -> 
                 {
-                    String[] args = pair.getKey().split(",");
+                    try {
+                	String[] args = pair.getKey().split(",");
                     //sql table is modificate
                     if (!hf.TimeUpdate(args).equals(pair.getValue())) {
                         ArrayList<DataWIFI> dwf=readSQL.Connect(args);
                         hf.AddSQL(dwf);
                         TableSQL.replace(pair.getKey(),hf.TimeUpdate(args));
+                    }}catch(NullPointerException e){
+                    	TableSQL.remove(pair.getKey());
                     }
                 });
                 try {

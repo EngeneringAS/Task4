@@ -192,15 +192,14 @@ public class HelpFunctionEx3
         ArrayList<DataWIFI> result =rf.ReadDataBase();
         for(int i=0;i<newdata.size();i++)
         {    
-            boolean flag=false;
-            for(int j=0;j<result.size()&& !flag;j++)
+            for(int j=0;j<result.size();j++)
                 if (result.get(j).getLla().compareLLA(newdata.get(i).getLla())==0 &&
                     result.get(j).getID().equals(newdata.get(i).getID()) &&
                     result.get(j).getTIME().equals(newdata.get(i).getTIME()))
                 {    
                     newdata.remove(i);
                     i--;
-                    flag=true;
+                    break;
                 }
         }
         return newdata;
