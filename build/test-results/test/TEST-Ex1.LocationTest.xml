@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.LocationTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-01-18T15:30:04" hostname="PlasticMan" time="0.005">
+  <properties/>
+  <testcase name="testCompareLLA" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testToString" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testGetAlt" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testGetLat" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testGetLon" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testSetAlt" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testSetLat" classname="Ex1.LocationTest" time="0.0"/>
+  <testcase name="testSetLon" classname="Ex1.LocationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

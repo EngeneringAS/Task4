@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.CompareDataWifiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-01-18T15:30:04" hostname="PlasticMan" time="0.028">
+  <properties/>
+  <testcase name="testFilterID" classname="Ex1.CompareDataWifiTest" time="0.02"/>
+  <testcase name="testFilterLocation" classname="Ex1.CompareDataWifiTest" time="0.001"/>
+  <testcase name="testCompareDataWIFIDataWIFI" classname="Ex1.CompareDataWifiTest" time="0.003"/>
+  <testcase name="testFilterTime" classname="Ex1.CompareDataWifiTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

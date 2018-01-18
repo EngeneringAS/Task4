@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex3.HelpFunctionEx3Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-01-18T15:30:32" hostname="PlasticMan" time="0.004">
+  <properties/>
+  <testcase name="testThreeMac" classname="Ex3.HelpFunctionEx3Test" time="0.002"/>
+  <testcase name="testRowTS" classname="Ex3.HelpFunctionEx3Test" time="0.0"/>
+  <testcase name="testShowFilter" classname="Ex3.HelpFunctionEx3Test" time="0.002"/>
+  <testcase name="testFirstAlgorithm" classname="Ex3.HelpFunctionEx3Test" time="0.0"/>
+  <testcase name="testShowData" classname="Ex3.HelpFunctionEx3Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

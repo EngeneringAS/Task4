@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.TestKMLTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-01-18T15:30:22" hostname="PlasticMan" time="7.625">
+  <properties/>
+  <testcase name="testWriteKML" classname="Ex1.TestKMLTest" time="3.746"/>
+  <testcase name="testCreatePlacemarkWithChart" classname="Ex1.TestKMLTest" time="0.728"/>
+  <testcase name="testCreateLine" classname="Ex1.TestKMLTest" time="0.705"/>
+  <testcase name="testReadCSV" classname="Ex1.TestKMLTest" time="1.568"/>
+  <testcase name="testRemoveWorseSignal" classname="Ex1.TestKMLTest" time="0.839"/>
+  <testcase name="testSearch" classname="Ex1.TestKMLTest" time="0.019"/>
+  <testcase name="testSetMAX" classname="Ex1.TestKMLTest" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

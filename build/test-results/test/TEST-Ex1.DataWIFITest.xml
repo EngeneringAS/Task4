@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.DataWIFITest" tests="15" skipped="0" failures="0" errors="0" timestamp="2018-01-18T15:30:04" hostname="PlasticMan" time="0.02">
+  <properties/>
+  <testcase name="testDataWIFI" classname="Ex1.DataWIFITest" time="0.001"/>
+  <testcase name="tearDown" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testGetTIMED" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testGetID" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testSetID" classname="Ex1.DataWIFITest" time="0.001"/>
+  <testcase name="testToString" classname="Ex1.DataWIFITest" time="0.004"/>
+  <testcase name="testGetTIME" classname="Ex1.DataWIFITest" time="0.001"/>
+  <testcase name="testGetWiFi" classname="Ex1.DataWIFITest" time="0.001"/>
+  <testcase name="testSetWIFINetwork" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testCopyWiFi" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testGetLla" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testSetTIME" classname="Ex1.DataWIFITest" time="0.002"/>
+  <testcase name="testSetWiFi" classname="Ex1.DataWIFITest" time="0.001"/>
+  <testcase name="testSetLla" classname="Ex1.DataWIFITest" time="0.0"/>
+  <testcase name="testGetWIFINetwork" classname="Ex1.DataWIFITest" time="0.0"/>
+  <system-out><![CDATA[Err,data is not correct
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
