@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Ex1.TestCSVTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-18T13:47:01" hostname="PlasticMan" time="12.29">
-  <properties/>
-  <testcase name="testWriteCSV" classname="Ex1.TestCSVTest" time="9.006"/>
-  <testcase name="testReadCSV" classname="Ex1.TestCSVTest" time="3.284"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
