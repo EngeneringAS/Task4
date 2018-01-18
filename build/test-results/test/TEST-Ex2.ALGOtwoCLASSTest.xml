@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex2.ALGOtwoCLASSTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-01-18T13:47:19" hostname="PlasticMan" time="0.003">
+  <properties/>
+  <testcase name="testGetPi" classname="Ex2.ALGOtwoCLASSTest" time="0.002"/>
+  <testcase name="testSetPi" classname="Ex2.ALGOtwoCLASSTest" time="0.0"/>
+  <testcase name="testGetWiFi" classname="Ex2.ALGOtwoCLASSTest" time="0.0"/>
+  <testcase name="testGetLLA" classname="Ex2.ALGOtwoCLASSTest" time="0.0"/>
+  <testcase name="testSetWiFi" classname="Ex2.ALGOtwoCLASSTest" time="0.0"/>
+  <testcase name="testSetLLA" classname="Ex2.ALGOtwoCLASSTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex2.HelpFunctionsTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2018-01-18T13:47:19" hostname="PlasticMan" time="0.942">
+  <properties/>
+  <testcase name="testExchange" classname="Ex2.HelpFunctionsTest" time="0.002"/>
+  <testcase name="testDif" classname="Ex2.HelpFunctionsTest" time="0.0"/>
+  <testcase name="Find" classname="Ex2.HelpFunctionsTest" time="0.0"/>
+  <testcase name="testweight_pi" classname="Ex2.HelpFunctionsTest" time="0.918"/>
+  <testcase name="testHelpToFind" classname="Ex2.HelpFunctionsTest" time="0.0"/>
+  <testcase name="testDataToFind" classname="Ex2.HelpFunctionsTest" time="0.001"/>
+  <testcase name="testWriteWeight2" classname="Ex2.HelpFunctionsTest" time="0.016"/>
+  <testcase name="testWriteWeight" classname="Ex2.HelpFunctionsTest" time="0.002"/>
+  <testcase name="testWeightAlgo2" classname="Ex2.HelpFunctionsTest" time="0.0"/>
+  <testcase name="testMapToList" classname="Ex2.HelpFunctionsTest" time="0.0"/>
+  <system-out><![CDATA[Why NULL :(
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

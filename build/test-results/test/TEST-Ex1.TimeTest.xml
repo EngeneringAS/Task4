@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.TimeTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-01-18T13:47:19" hostname="PlasticMan" time="0.003">
+  <properties/>
+  <testcase name="testGetFt" classname="Ex1.TimeTest" time="0.001"/>
+  <testcase name="testSetFt" classname="Ex1.TimeTest" time="0.001"/>
+  <testcase name="setUp" classname="Ex1.TimeTest" time="0.0"/>
+  <testcase name="testGetFtD" classname="Ex1.TimeTest" time="0.0"/>
+  <system-out><![CDATA[Err,data is not correct
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

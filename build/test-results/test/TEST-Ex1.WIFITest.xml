@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ex1.WIFITest" tests="10" skipped="0" failures="0" errors="0" timestamp="2018-01-18T13:47:19" hostname="PlasticMan" time="0.002">
+  <properties/>
+  <testcase name="testSetFrequency" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testToString" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testCheckNumChar" classname="Ex1.WIFITest" time="0.001"/>
+  <testcase name="testGetSSID" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testGetFrequency" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testSetSignal" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testGetMAC" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testGetSignal" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testSetSSID" classname="Ex1.WIFITest" time="0.0"/>
+  <testcase name="testSetMAC" classname="Ex1.WIFITest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
