@@ -5,9 +5,9 @@
  */
 package test.Ex1;
 //libraries
-import Ex1.*;
 import org.junit.After;
 import org.junit.Test;
+import Ex1.Time;
 import static org.junit.Assert.*;
 
 /**

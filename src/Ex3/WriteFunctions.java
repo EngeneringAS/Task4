@@ -38,10 +38,25 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class WriteFunctions {
     //variable
-    private final String pathDataBase="database//database.csv";         //path to database
-    private final String pathUNDO="database//UNDO.csv";                 //path to UNDO database
-    private final String pathFilter="database//filter.txt";             //path to filter
-    private final String pathOldFilter="database//undofilter.txt";      //path to filter
+	private static String pathDataBase;     	//path to database
+	private static String pathUNDO;            //path to UNDO database
+	private static String pathFilter;         	//path to filter
+	private static String pathOldFilter;    	//path
+	/**
+	 * constructor
+	 * @param path location where app run
+	 */
+	public WriteFunctions(String path)
+	{
+		WriteFunctions.pathDataBase=path+"\\database.csv";
+	    WriteFunctions.pathUNDO=path+"\\undo.csv";
+	    WriteFunctions.pathFilter=path+"\\filter.txt";
+	    WriteFunctions.pathOldFilter=path+"\\undofilter.txt";
+	    WriteFilter();
+	    WriteUNDOFilter();
+	    WriteNewUNDOCSV();
+	    WriteNewCSV();
+	}
     /**
      * the function generates and set a placemark object, with the given statistical data
      * @param document structure of the KML file
@@ -194,7 +209,10 @@ public class WriteFunctions {
             JOptionPane.showMessageDialog(null, "csv record not saved");
         }
     }
-    //save filter
+    /**
+     * the function save filter
+     * @param filter that need save
+     */
     public void WriteFilter(Filter filter)
     {
         String s;
@@ -296,7 +314,10 @@ public class WriteFunctions {
             return;
         }
     }
-    //
+    /**
+     * the function save file
+     * @param filter toString of filter
+     */
     public void WriteFilter(String filter)
     {
         // Convert the string to a byte array
@@ -308,6 +329,90 @@ public class WriteFunctions {
              out.write(data, 0, data.length);
         }catch(IOException x){
             return;
+        }
+    }
+    /**
+     * the function create database.csv
+     */
+    private void WriteNewCSV()
+    {
+    	// use FileWriter constructor that specifies open for appending
+        CsvWriter csvOutput;
+		try {
+			csvOutput = new CsvWriter(new FileWriter(pathDataBase, false), ',');
+			//headers for first row
+	        csvOutput.write("TIME");	    csvOutput.write("ID");
+	        csvOutput.write("latitude");	csvOutput.write("longitude");	csvOutput.write("altitude");
+	        csvOutput.write("#WiFi networks");
+	        for (int i=1;i<11;i++)
+	        {
+	        	csvOutput.write("SSID"+i);
+	            csvOutput.write("MAC"+i);
+	            csvOutput.write("Frequency"+i);
+	            csvOutput.write("Signal"+i);
+	        }
+	        csvOutput.endRecord();
+	        csvOutput.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    /**
+     * the function create undo.csv
+     */
+    private void WriteNewUNDOCSV()
+    {
+    	// use FileWriter constructor that specifies open for appending
+        CsvWriter csvOutput;
+		try {
+			csvOutput = new CsvWriter(new FileWriter(pathUNDO, false), ',');
+			//headers for first row
+	        csvOutput.write("TIME");	    csvOutput.write("ID");
+	        csvOutput.write("latitude");	csvOutput.write("longitude");	csvOutput.write("altitude");
+	        csvOutput.write("#WiFi networks");
+	        for (int i=1;i<11;i++)
+	        {
+	        	csvOutput.write("SSID"+i);
+	            csvOutput.write("MAC"+i);
+	            csvOutput.write("Frequency"+i);
+	            csvOutput.write("Signal"+i);
+	        }
+	        csvOutput.endRecord();
+	        csvOutput.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    /**
+     * the function create filter.txt
+     */
+    private void WriteFilter()
+    {
+        String  s="null";
+        byte data[] = s.getBytes();
+        Path p = Paths.get(pathFilter);
+        try (OutputStream out = new BufferedOutputStream(
+             Files.newOutputStream(p))) 
+        {
+             out.write(data, 0, data.length);
+        }catch(IOException x){
+            JOptionPane.showMessageDialog(null, "filter.txt record not saved");
+        }
+    }
+    /**
+     * the function create undofilter.txt
+     */
+    private void WriteUNDOFilter()
+    {
+        String  s="null";
+        byte data[] = s.getBytes();
+        Path p = Paths.get(pathOldFilter);
+        try (OutputStream out = new BufferedOutputStream(
+             Files.newOutputStream(p))) 
+        {
+             out.write(data, 0, data.length);
+        }catch(IOException x){
+            JOptionPane.showMessageDialog(null, "undofilter.txt record not saved");
         }
     }
 }

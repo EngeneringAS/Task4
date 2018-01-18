@@ -302,9 +302,8 @@ public class HelpFunctions {
 	 */
 	public ArrayList<ALGOtwoCLASS> Find(ArrayList<DataWIFI> DWF,ArrayList<WIFI> WiFi)
 	{
-            System.out.println(DWF.size()+" "+WiFi.size());
-            ArrayList<ALGOtwoCLASS> tmp_atc=new ArrayList<ALGOtwoCLASS>();
 		try {
+            ArrayList<ALGOtwoCLASS> tmp_atc=new ArrayList<ALGOtwoCLASS>();
 			for (int i=0;i<DWF.size();i++)
 				for (int j=0;j<DWF.get(i).getWiFi().size();j++)
 				{

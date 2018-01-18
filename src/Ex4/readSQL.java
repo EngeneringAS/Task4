@@ -5,9 +5,7 @@
  */
 package Ex4;
 //libraries
-import Ex1.DataWIFI;
-import Ex1.Location;
-import Ex1.WIFI;
+import Ex1.*;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;

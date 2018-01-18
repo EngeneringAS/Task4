@@ -30,9 +30,9 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class HelpFunctionEx3 
 {
     //variables
-    private final String pathDataBase="database//database.csv";     //path to database
-    private ReadFunctions rf=new ReadFunctions();
-    private WriteFunctions wf=new WriteFunctions();
+    private static String pathDataBase;     //path to database
+    private static ReadFunctions rf;
+    private static WriteFunctions wf;
     /**
      * the function add sql data to location database
      * @param dwf data from sql
@@ -145,7 +145,11 @@ public class HelpFunctionEx3
      */
     public String ShowData()
     {
-        return rf.ReadShowData();
+    	try {
+    	return rf.ReadShowData();
+    	}catch(NullPointerException e) {
+            return "Data: file not found";
+        }
     }
     /**
      * the function saves a special file
@@ -189,7 +193,7 @@ public class HelpFunctionEx3
     //the function delete duplicate from new data
     private ArrayList<DataWIFI> DeleteDuplicate(ArrayList<DataWIFI> newdata)
     {
-        ArrayList<DataWIFI> result =rf.ReadDataBase();
+        ArrayList<DataWIFI> result =ReadFunctions.ReadDataBase();
         for(int i=0;i<newdata.size();i++)
         {    
             for(int j=0;j<result.size();j++)
@@ -252,11 +256,15 @@ public class HelpFunctionEx3
         ClassOfAlgorithm1 coaFirst=new ClassOfAlgorithm1();
         HelpFunctions hlp=new HelpFunctions();
         Location place=new Location();
-        coaFirst=rf.ReadFirstAlgo(mac);
-        place=hlp.WriteWeight(coaFirst);
-        if (place==null)
-            return new Location();
-        return place;
+        try{
+        	coaFirst=rf.ReadFirstAlgo(mac);
+        	place=hlp.WriteWeight(coaFirst);
+        	if (place==null)
+        		return new Location();
+        	return place;
+        }catch(NullPointerException e) {
+        	return new Location();
+        }
     }
     /**
     * the function returns a place for the three MACs according to the second algorithm 
@@ -339,7 +347,11 @@ public class HelpFunctionEx3
      */
     public String ShowFilter()
     {
-        return rf.ReadShowFilter();
+    	try{
+    		 return rf.ReadShowFilter();
+        }catch(NullPointerException e) {
+        	return "file not found";
+        }
     }
     /**
      * update database with filter
@@ -347,7 +359,7 @@ public class HelpFunctionEx3
      */
     public void WriteFilter(Filter _filter)
     {
-        ArrayList<DataWIFI> dwf=rf.ReadDataBase();
+        ArrayList<DataWIFI> dwf=ReadFunctions.ReadDataBase();
         Iterator<DataWIFI> it = dwf.iterator();
         while (it.hasNext())
         {
@@ -380,7 +392,7 @@ public class HelpFunctionEx3
      */
     public void WriteUNDO()
     {
-        wf.WriteUNDO(rf.ReadDataBase());
+        wf.WriteUNDO(ReadFunctions.ReadDataBase());
         wf.WriteOldFilter(rf.ReadShowFilter());
     }
     /**
@@ -392,4 +404,16 @@ public class HelpFunctionEx3
     {
         return readSQL.TimeUPDATE(args);
     }
+    /**
+     * the function create database
+     * @param path location where run application
+     */
+	public static void initDatabase(String path) {
+		System.out.println(path);
+		File dir = new File(path+"\\database");
+		dir.mkdirs();
+		pathDataBase=path+"\\database\\database.csv";
+		rf=new ReadFunctions(path+"\\database");
+		wf=new WriteFunctions(path+"\\database");
+	}
 }

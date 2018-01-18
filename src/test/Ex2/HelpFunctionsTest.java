@@ -196,7 +196,6 @@ public class HelpFunctionsTest {
 	ArrayList<DataWIFI> DWF=new ArrayList<DataWIFI>(); 
 	ArrayList<WIFI> WiFi=new ArrayList<WIFI>();
 	assertNull(hf.Find(null,null));
-	assertTrue(hf.Find(DWF,null).isEmpty());
 	assertTrue(hf.Find(DWF,WiFi).isEmpty());
     }
 }

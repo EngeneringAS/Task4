@@ -6,7 +6,7 @@
 package test.Ex4;
 //libraries
 import Ex1.*;
-import Ex4.*;
+import Ex4.readSQL;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;

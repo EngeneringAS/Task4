@@ -26,17 +26,28 @@ import javax.swing.JOptionPane;
  */
 public class ReadFunctions{
     //variables
-    private final String pathDataBase="database//database.csv";     //path to database
-    private final String pathUNDO="database//undo.csv";             //path to UNDO database
-    private final String pathFilter="database//filter.txt";         //path to filter
-    private final String pathOldFilter="database//undofilter.txt";      //path to filter
+    private static String pathDataBase;	  	//path to database
+    private static String pathUNDO;            //path to UNDO database
+    private static String pathFilter;;         //path to filter
+    private static String pathOldFilter;     	//path to filter
     private static Map<String,Integer> MaxSignal=new HashMap<>();   //map max signal of wifi
+    /**
+	 * constructor
+	 * @param path location where app run
+	 */
+    public ReadFunctions(String path)
+    {
+    	ReadFunctions.pathDataBase=path+"\\database.csv";
+    	ReadFunctions.pathUNDO=path+"\\undo.csv";
+    	ReadFunctions.pathFilter=path+"\\filter.txt";
+    	ReadFunctions.pathOldFilter=path+"\\undofilter.txt";
+    }
     /**
      * the function setting max value of wifi signal to map
      * @param wf wifi network
      * @return true if replace was, false if replace was not (ONLY FOR TestKMLTest) 
      */
-     private boolean setMAX(WIFI wf)
+     private static boolean setMAX(WIFI wf)
     {
         Integer WFsignal=wf.getSignal();
 	if (!MaxSignal.containsKey(wf.getMAC()))    //there is no such MAC in the map
@@ -89,7 +100,7 @@ public class ReadFunctions{
 	return DWF;
     }
     //the function read database
-    public ArrayList<DataWIFI> ReadDataBase()
+    public static ArrayList<DataWIFI> ReadDataBase()
     {
         //variables
         ArrayList<DataWIFI> dwf=new ArrayList<>();          //data for file csv
@@ -415,6 +426,8 @@ public class ReadFunctions{
         }catch(IllegalArgumentException e) {
             JOptionPane.showMessageDialog(null, "Why null????");
             return "Data:";
+        }catch(NullPointerException e) {
+            return "Data: file not found";
         }
         return "Data: Rows= "+dwf.size()+" ,MACs= "+MaxSignal.size()+" ";
     }

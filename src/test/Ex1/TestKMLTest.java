@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package test.Ex1;
-import Ex1.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import org.junit.Test;
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**

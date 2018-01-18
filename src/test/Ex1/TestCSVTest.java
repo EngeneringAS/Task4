@@ -6,8 +6,8 @@
 package test.Ex1;
 //libraries
 import java.util.ArrayList;
-import Ex1.*;
 import org.junit.Test;
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**

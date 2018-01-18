@@ -5,8 +5,8 @@
  */
 package test.Ex2;
 //libraries
-import Ex2.*;
 import org.junit.Test;
+import Ex2.WeightLLA;
 import static org.junit.Assert.*;
 
 /**

@@ -7,9 +7,7 @@ package test.Ex1;
 //libraries
 import org.junit.After;
 import org.junit.Test;
-import Ex1.CompareDataWifi;
-import Ex1.DataWIFI;
-import Ex1.Location;
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**

@@ -6,7 +6,8 @@
 package test.Ex1;
 //libraries
 import org.junit.Test;
-import Ex1.*;
+import Ex1.Location;
+
 import static org.junit.Assert.*;
 
 /**

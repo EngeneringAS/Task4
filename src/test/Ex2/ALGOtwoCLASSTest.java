@@ -6,7 +6,7 @@
 package test.Ex2;
 //libraries
 import Ex1.*;
-import Ex2.*;
+import Ex2.ALGOtwoCLASS;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;

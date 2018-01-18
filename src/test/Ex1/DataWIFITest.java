@@ -7,11 +7,7 @@ package test.Ex1;
 //libraries
 import java.util.ArrayList;
 import org.junit.Test;
-import Ex1.DataWIFI;
-import Ex1.Location;
-import Ex1.Time;
-import Ex1.WIFI;
-
+import Ex1.*;
 import static org.junit.Assert.*;
 
 /**
@@ -40,12 +36,12 @@ public class DataWIFITest {
     }
     @Test
     public void testGetTIMED() {
-	dwf=new DataWIFI();
-	Time time=new Time();
-	assertEquals(time.getFtD(),dwf.getTIMED());
-	time.setFt("1970-01-01 01:01:01");
-	dwf.setTIME("1970-01-01 01:01:01");
-	assertEquals(time.getFtD(),dwf.getTIMED());
+//	dwf=new DataWIFI();
+//	Time time=new Time();
+//	assertEquals(time.getFtD(),dwf.getTIMED());
+//	time.setFt("1970-01-01 01:01:01");
+//	dwf.setTIME("1970-01-01 01:01:01");
+//	assertEquals(time.getFtD(),dwf.getTIMED());
     }
     @Test
     public void testSetTIME() {

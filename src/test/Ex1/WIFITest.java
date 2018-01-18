@@ -8,7 +8,7 @@ package test.Ex1;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import Ex1.*;
+import Ex1.WIFI;
 import static org.junit.Assert.*;
 
 /**

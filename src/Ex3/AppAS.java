@@ -1,20 +1,18 @@
 /* AppAS Application for assignment 3 */
 package Ex3;
 //libraries
-import Ex1.DataWIFI;
-import Ex1.Location;
-import Ex1.WIFI;
+import Ex1.*;
+import javax.swing.JFrame;
+import java.io.File;
 import Ex4.readSQL;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Toolkit;
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -28,7 +26,6 @@ public class AppAS extends JFrame {
     //define variables
     private static final long serialVersionUID = 8L;
     private static final HelpFunctionEx3 hf=new HelpFunctionEx3();
-    private static final ReadFunctions rf=new ReadFunctions();
     private int flag=0;
     private boolean flag_UNDO=false;
     private Filter first;
@@ -72,9 +69,10 @@ public class AppAS extends JFrame {
     /** Creates new form AppAS */
     public AppAS() 
     {
-        
+		File file = new File(AppAS.class.getProtectionDomain().getCodeSource().getLocation().getPath());
         initComponents();
-        setIcon();
+        HelpFunctionEx3.initDatabase(file.getPath()+"s\\");
+        //setIcon();
         pack();
         // Center in the screen
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -563,7 +561,7 @@ public class AppAS extends JFrame {
         jButtonShowData.setText("Show");
         jButtonShowData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonShowDataActionPerformed(evt);
+               jButtonShowDataActionPerformed(evt);
             }
         });
 
@@ -1127,8 +1125,8 @@ public class AppAS extends JFrame {
         jTextFieldSaveKml.setText(str);
     }//GEN-LAST:event_jButtonSaveKMLActionPerformed
     //the functon show data about number of WiFi and rows in database
-    private void jButtonShowDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowDataActionPerformed
-        jTextFieldShowData.setText(hf.ShowData());
+    private void jButtonShowDataActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_jButtonShowDataActionPerformed
+    	jTextFieldShowData.setText(hf.ShowData());
         jTextFieldFilter.setText(hf.ShowFilter());
     }//GEN-LAST:event_jButtonShowDataActionPerformed
     //the function cleaning database
@@ -1197,7 +1195,7 @@ public class AppAS extends JFrame {
             if (tmp3.setSignal(Integer.parseInt(jFormattedTextFieldSignal3.getText()))==1)
                 ThreeMAC.setWiFi(tmp3);
         }
-        dwf=rf.ReadDataBase();
+        dwf=ReadFunctions.ReadDataBase();
         place=hf.ThreeMac(dwf,ThreeMAC);
         jTextFieldLantitude.setText(String.valueOf(place.getLat()));
         jTextFieldLongtitude.setText(String.valueOf(place.getLon()));
@@ -1212,7 +1210,7 @@ public class AppAS extends JFrame {
         String str=jTextFieldRowTS.getText();
         ArrayList<DataWIFI> dwf;
         Location place;
-        dwf=rf.ReadDataBase();
+        dwf=ReadFunctions.ReadDataBase();
         place=hf.RowTS(dwf,str);
         jTextFieldLantitude.setText(String.valueOf(place.getLat()));
         jTextFieldLongtitude.setText(String.valueOf(place.getLon()));
@@ -1492,10 +1490,10 @@ public class AppAS extends JFrame {
     private javax.swing.JMenuBar mainMenu;
     // End of variables declaration//GEN-END:variables
     //the function set icon to JFrame
-    private void setIcon()
-    {
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("WiFi.jpg")));
-    }
+//    private void setIcon()
+//    {
+//        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("WiFi.jpg")));
+//    }
     //run GUI
     private static class RunnableImpl implements Runnable {
 
